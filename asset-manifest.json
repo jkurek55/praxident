@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/praxident/static/css/main.f855e6bc.css",
+    "main.js": "/praxident/static/js/main.2ad803ec.js",
+    "static/js/453.38811ad4.chunk.js": "/praxident/static/js/453.38811ad4.chunk.js",
+    "static/media/logo.svg": "/praxident/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/praxident/index.html",
+    "main.f855e6bc.css.map": "/praxident/static/css/main.f855e6bc.css.map",
+    "main.2ad803ec.js.map": "/praxident/static/js/main.2ad803ec.js.map",
+    "453.38811ad4.chunk.js.map": "/praxident/static/js/453.38811ad4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.2ad803ec.js"
+  ]
+}
