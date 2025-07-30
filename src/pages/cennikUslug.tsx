@@ -1,20 +1,23 @@
 import React from 'react';
 import praxiLogo from '../images/praxiLogo.png'
+import { Route, useNavigate } from 'react-router-dom';
+import Container from '../components/container';
+import PageContainer from '../components/pageContainer';
 
 const CennikUslug: React.FC = () => {
+  const navigate = useNavigate()
   return (
-    <div style={styles.container}>
-      <div style={styles.headerRow}>
-        <img src={praxiLogo} alt="praxident-logo" style={styles.praxiLogo}/>
-        <div style={styles.textLabel}>CENNIK USŁUG</div>
-      </div>
-      <Wybielanie/>
-      <StomatologiaDziecieca/>
-      <Protetyka/>
-      <footer style={styles.footer}>
-        <p>© {new Date().getFullYear()} Praxident</p>
-      </footer>
-    </div>
+    <PageContainer>
+      <Container>
+        <div style={styles.headerRow}>
+          <img src={praxiLogo} onClick={() => navigate('/praxident/')} alt="praxident-logo" style={styles.praxiLogo}/>
+          <div style={styles.textLabel}>CENNIK USŁUG</div>
+        </div>
+        <Wybielanie/>
+        <StomatologiaDziecieca/>
+        <Protetyka/>
+      </Container>
+    </PageContainer>
   );
 };
 
@@ -141,18 +144,6 @@ const Protetyka: React.FC = () => {
 }
 
 const styles: { [key: string]: React.CSSProperties } = {
-container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: 'clamp(1rem, 5vw, 3rem)',
-    fontFamily: 'Arial, sans-serif',
-    color: 'black',
-    lineHeight: 1.6,
-    width: '100%',
-    boxSizing: 'border-box',
-    background: 'rgb(221, 214, 214)',
-  },
   headerRow: {
     display: 'flex',
     alignItems: 'center',
@@ -168,6 +159,8 @@ container: {
     height: 'auto',
     marginBottom: '2rem',
     marginLeft: '10vw',
+    cursor: 'pointer'
+    
   },
   textLabel: {
     fontSize: '5rem',
@@ -188,7 +181,7 @@ container: {
     width: '80vw',
     marginLeft: '10vw',
     marginRight: '10vw',
-    marginBottom: '20rem'
+    marginBottom: '14rem'
   },
   cell: {
     border: '1px solid black',
