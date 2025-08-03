@@ -1,25 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Container from '../components/container';
 import PraxiLogo from '../components/praxiLogo';
 import PageContainer from '../components/pageContainer';
 import HeaderRow from '../components/headerRow';
 import TransparentBox from '../components/transparentBox';
+import MenuButton from '../components/menuButton';
+import DropdownMenu from '../components/dropdownMenu';
+import {Button, BlackButton, DashedButton} from '../components/buttons';
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
+
+  const [showDropdownMenu, setShowDropdownMenu] = useState<boolean>(false)
+
   return (
     <PageContainer>
       <HeaderRow>
         <PraxiLogo />
           <TransparentBox>
-            <div style={styles.button} >START</div>
-            <div style={styles.dashedButton} onClick={() => navigate('/praxident/cennik')}>ZABIEGI</div>
-            <div style={styles.button}>O NAS</div>
-            <div style={styles.button}>CENNIK</div>
-            <div style={styles.blackButton}>KONTAKT</div>
+            <Button>START</Button>
+            <DashedButton onClick={() => navigate('/praxident/cennik')}>ZABIEGI</DashedButton>
+            <Button>O NAS</Button>
+            <Button>CENNIK</Button>
+            <BlackButton>KONTAKT</BlackButton>
           </TransparentBox>
+          <MenuButton onClick={() => setShowDropdownMenu(!showDropdownMenu)}/>
       </HeaderRow>
+      {
+        showDropdownMenu && <DropdownMenu relativeY={50}>
+            <Button>START</Button>
+            <DashedButton onClick={() => navigate('/praxident/cennik')}>ZABIEGI</DashedButton>
+            <Button>O NAS</Button>
+            <Button>CENNIK</Button>
+            <BlackButton>KONTAKT</BlackButton>
+          </DropdownMenu>
+      }
+
     </PageContainer>
   );
 };
@@ -31,7 +47,7 @@ const styles: { [key: string]: React.CSSProperties } = {
 
   button: {
     width: '100%',
-    maxWidth: '20rem',
+    //maxWidth: '20rem',
     padding: 'clamp(0.75rem, 2vw, 1.25rem)',
     backgroundColor: 'rgba(255,255,255,0)',
     color: 'black',
@@ -44,7 +60,7 @@ const styles: { [key: string]: React.CSSProperties } = {
   },
   dashedButton: {
     width: '100%',
-    maxWidth: '20rem',
+    //maxWidth: '20rem',
     padding: 'clamp(0.75rem, 2vw, 1.25rem)',
     backgroundColor: 'rgba(0, 0, 0, 0)',
     color: 'black',
@@ -57,7 +73,7 @@ const styles: { [key: string]: React.CSSProperties } = {
   },
     blackButton: {
       width: '100%',
-      maxWidth: '20rem',
+      //maxWidth: '20rem',
       padding: 'clamp(0.75rem, 2vw, 1.25rem)',
       backgroundColor: 'rgba(0, 0, 0, 1)',
       color: 'white',
