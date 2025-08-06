@@ -7,6 +7,7 @@ import TransparentBox from '../components/transparentBox';
 import MenuButton from '../components/menuButton';
 import DropdownMenu from '../components/dropdownMenu';
 import {Button, BlackButton, DashedButton} from '../components/buttons';
+import SmileSection from '../components/slides/smileSection';
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ const LandingPage: React.FC = () => {
   return (
     <PageContainer>
       <HeaderRow>
-        <PraxiLogo />
+        <PraxiLogo alt='praxident-logo' />
           <TransparentBox>
             <Button>START</Button>
             <DashedButton onClick={() => navigate('/praxident/cennik')}>ZABIEGI</DashedButton>
@@ -26,6 +27,7 @@ const LandingPage: React.FC = () => {
           </TransparentBox>
           <MenuButton onClick={() => setShowDropdownMenu(!showDropdownMenu)}/>
       </HeaderRow>
+      <SmileSection></SmileSection>
       {
         showDropdownMenu && <DropdownMenu relativeY={50}>
             <Button>START</Button>

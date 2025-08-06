@@ -1,22 +1,22 @@
 import React from 'react';
 import praxiLogo from '../images/praxiLogo.png'
 import { Route, useNavigate } from 'react-router-dom';
-import Container from '../components/container';
 import PageContainer from '../components/pageContainer';
+import HeaderContainer from '../components/headerContainer';
+import PraxiLogo from '../components/praxiLogo';
+import TextLabel from '../components/textLabel';
 
 const CennikUslug: React.FC = () => {
   const navigate = useNavigate()
   return (
     <PageContainer>
-      <Container>
-        <div style={styles.headerRow}>
-          <img src={praxiLogo} onClick={() => navigate('/praxident/')} alt="praxident-logo" style={styles.praxiLogo}/>
-          <div style={styles.textLabel}>CENNIK USŁUG</div>
-        </div>
+        <HeaderContainer>
+          <PraxiLogo onClick={() => navigate('/praxident/')} alt="praxident-logo"/>
+          <TextLabel className={'w-200 h-100 text-[55px] md:text-[75px] '}>CENNIK USŁUG</TextLabel>
+        </HeaderContainer>
         <Wybielanie/>
         <StomatologiaDziecieca/>
         <Protetyka/>
-      </Container>
     </PageContainer>
   );
 };
