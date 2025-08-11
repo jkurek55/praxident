@@ -8,6 +8,7 @@ import MenuButton from '../components/menuButton';
 import DropdownMenu from '../components/dropdownMenu';
 import {Button, BlackButton, DashedButton} from '../components/buttons';
 import SmileSection from '../components/slides/smileSection';
+import FieldSection from '../components/slides/fieldSection';
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
@@ -27,7 +28,13 @@ const LandingPage: React.FC = () => {
           </TransparentBox>
           <MenuButton onClick={() => setShowDropdownMenu(!showDropdownMenu)}/>
       </HeaderRow>
-      <SmileSection></SmileSection>
+      <div className={'w-full overflow-hidden'}>
+        <div className={'flex-col'}>
+          <SmileSection></SmileSection>
+          <FieldSection></FieldSection>
+        </div>
+      </div>
+      
       {
         showDropdownMenu && <DropdownMenu relativeY={50}>
             <Button>START</Button>
