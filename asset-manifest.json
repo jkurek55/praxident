@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/praxident/static/css/main.f855e6bc.css",
-    "main.js": "/praxident/static/js/main.8097af81.js",
+    "main.css": "/praxident/static/css/main.8e12a4a3.css",
+    "main.js": "/praxident/static/js/main.6583a821.js",
     "static/js/453.38811ad4.chunk.js": "/praxident/static/js/453.38811ad4.chunk.js",
+    "static/media/smilingWoman.png": "/praxident/static/media/smilingWoman.e231607988c32254d1cc.png",
     "static/media/praxiLogo.png": "/praxident/static/media/praxiLogo.a6943f64f0f8f767defa.png",
+    "static/media/2.jpg": "/praxident/static/media/2.5ffe495c841cc2785856.jpg",
+    "static/media/logo.png": "/praxident/static/media/logo.ee2ef3d4743bbaa599e3.png",
     "index.html": "/praxident/index.html",
-    "main.f855e6bc.css.map": "/praxident/static/css/main.f855e6bc.css.map",
-    "main.8097af81.js.map": "/praxident/static/js/main.8097af81.js.map",
+    "main.8e12a4a3.css.map": "/praxident/static/css/main.8e12a4a3.css.map",
+    "main.6583a821.js.map": "/praxident/static/js/main.6583a821.js.map",
     "453.38811ad4.chunk.js.map": "/praxident/static/js/453.38811ad4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.8097af81.js"
+    "static/css/main.8e12a4a3.css",
+    "static/js/main.6583a821.js"
   ]
 }
