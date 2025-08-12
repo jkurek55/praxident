@@ -10,6 +10,8 @@ import {Button, BlackButton, DashedButton} from '../components/buttons';
 import SmileSection from '../components/slides/smileSection';
 import FieldSection from '../components/slides/fieldSection';
 import RentgenSection from '../components/slides/rentgenSection';
+import OfficeSlide from '../components/slides/officeSlide';
+import RegistrationSlide from '../components/slides/registrationSlide';
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
@@ -34,6 +36,8 @@ const LandingPage: React.FC = () => {
           <SmileSection></SmileSection>
           <FieldSection></FieldSection>
           <RentgenSection></RentgenSection>
+          <OfficeSlide></OfficeSlide>
+          <RegistrationSlide></RegistrationSlide>
         </div>
       </div>
       
