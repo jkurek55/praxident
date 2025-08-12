@@ -5,7 +5,7 @@ interface menuButtonProps {
   className?: string;
 }
 
-const MenuButton: React.FC<menuButtonProps> = ({ onClick, className = '' }) => {
+const MenuButton: React.FC<menuButtonProps> = ({ onClick, className }) => {
   return (
     <button
       onClick={onClick}

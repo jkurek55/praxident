@@ -9,7 +9,7 @@ interface headerRowProps{
 
 const HeaderRow: React.FC<headerRowProps> = ({children, className}) => {
     return (
-        <div className={"flex justify-between"}>
+        <div className={`flex justify-between ${className}`}>
             {children}
         </div>
     )

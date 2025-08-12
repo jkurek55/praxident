@@ -12,7 +12,7 @@ interface PraxiLogoProps {
 const PraxiLogo: React.FC<PraxiLogoProps> = ({ componentSizes, className = '', onClick, alt}) => {
     if (!componentSizes) {const componentSizes = [300, 400, 500, 600, 700]}
     return (
-    <img src={praxiLogo} onClick={onClick} className={`w-[400px] md:w-[600px] xl:w-[600px] alt=${alt} cursor-pointer ${className}`}/>
+    <img src={praxiLogo} onClick={onClick} className={`w-[300px] md:w-[600px] xl:w-[600px] alt=${alt} cursor-pointer ${className}`}/>
     );
 };
 

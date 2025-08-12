@@ -9,6 +9,7 @@ import DropdownMenu from '../components/dropdownMenu';
 import {Button, BlackButton, DashedButton} from '../components/buttons';
 import SmileSection from '../components/slides/smileSection';
 import FieldSection from '../components/slides/fieldSection';
+import RentgenSection from '../components/slides/rentgenSection';
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const LandingPage: React.FC = () => {
 
   return (
     <PageContainer>
-      <HeaderRow>
+      <HeaderRow >
         <PraxiLogo alt='praxident-logo' />
           <TransparentBox>
             <Button>START</Button>
@@ -29,9 +30,10 @@ const LandingPage: React.FC = () => {
           <MenuButton onClick={() => setShowDropdownMenu(!showDropdownMenu)}/>
       </HeaderRow>
       <div className={'w-full overflow-hidden'}>
-        <div className={'flex-col'}>
+        <div>
           <SmileSection></SmileSection>
           <FieldSection></FieldSection>
+          <RentgenSection></RentgenSection>
         </div>
       </div>
       
