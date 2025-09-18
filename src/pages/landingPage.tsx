@@ -12,6 +12,9 @@ import FieldSection from '../components/slides/fieldSection';
 import RentgenSection from '../components/slides/rentgenSection';
 import OfficeSlide from '../components/slides/officeSlide';
 import RegistrationSlide from '../components/slides/registrationSlide';
+import MapSlide from '../components/slides/mapSlide';
+import CustomFooter from '../components/customFooter';
+import ContactSection from '../components/slides/contactSection';
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
@@ -33,14 +36,21 @@ const LandingPage: React.FC = () => {
       </HeaderRow>
       <div className={'w-full overflow-hidden'}>
         <div>
-          <SmileSection></SmileSection>
-          <FieldSection></FieldSection>
-          <RentgenSection></RentgenSection>
-          <OfficeSlide></OfficeSlide>
-          <RegistrationSlide></RegistrationSlide>
+          <SmileSection/>
+          <FieldSection/>
+          <RentgenSection/>
+          <OfficeSlide/>
+          <RegistrationSlide/>
+          <MapSlide/>
+          <ContactSection/>
         </div>
       </div>
-      
+      <CustomFooter/>
+
+
+
+
+
       {
         showDropdownMenu && <DropdownMenu relativeY={50}>
             <Button>START</Button>
@@ -50,7 +60,6 @@ const LandingPage: React.FC = () => {
             <BlackButton>KONTAKT</BlackButton>
           </DropdownMenu>
       }
-
     </PageContainer>
   );
 };

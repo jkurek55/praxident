@@ -10,9 +10,6 @@ const PageContainer: React.FC<pageContainerProps> = ({children, className}) => {
     return (
         <div className={`flex-col bg-[#D4D4D4] ${className}`}>
             {children}
-            <footer className={"text-center"}>
-            <p>© {new Date().getFullYear()} Praxident</p>
-            </footer>
         </div>
     )
 }

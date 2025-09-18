@@ -18,8 +18,8 @@ const Row:React.FC<rowProps> = ({children, className}) => {
 const RegistrationSlide: React.FC = () => {
     return (
         <section>
-            <div className="grid grid-cols-2">
-                <div className="grid grid-rows-3 place-items-center content-center py-8">
+            <div className="grid grid-cols-1 xs:grid-cols-2">
+                <div className="grid grid-rows-3 place-items-center content-center  py-8">
                     <Row>Rejestracja czynna od poniedziałku do piątku <br /> w godzinach:</Row>
                     <div className="row-span-2 font-sans font-light text-sm pl-2">
                         Poniedziałek: 11:30 - 19:00 <br />
@@ -29,7 +29,7 @@ const RegistrationSlide: React.FC = () => {
                         Piątek: 8:30 - 16:00 <br />
                     </div>
                 </div>
-                <img className="object-contain" src={registrationDesk} alt="registration desk" />
+                <img  className="hidden xs:block object-contain" src={registrationDesk} alt="registration desk" />
             </div>
 
         </section>
