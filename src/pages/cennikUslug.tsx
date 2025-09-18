@@ -1,145 +1,184 @@
 import React from 'react';
-import praxiLogo from '../images/praxiLogo.png'
 import { Route, useNavigate } from 'react-router-dom';
 import PageContainer from '../components/pageContainer';
 import HeaderContainer from '../components/headerContainer';
 import PraxiLogo from '../components/praxiLogo';
 import TextLabel from '../components/textLabel';
+import CustomFooter from '../components/customFooter';
+
+interface containerProps{
+  children: React.ReactNode
+}
+
+const Table: React.FC<containerProps> = ({children}) => {
+  return (
+  <table className='ml-5 w-[90vw] m-5'>
+    {children}
+  </table>
+  )
+}
+
+const TableLabel: React.FC<containerProps> = ({children}) => {
+  return (
+  <div className='text-4xl ml-5 mb-2 font-light'>
+    {children}
+  </div>
+  )
+}
+
+const Cell: React.FC<containerProps> = ({children}) => {
+  return (
+  <td className='border border-black text-sm text-center px-2 py-3'>
+    {children}
+  </td>
+  )
+}
+
+const TableContainer: React.FC<containerProps> = ({children}) => {
+  return (
+  <div className='mb-10'>
+    {children}
+  </div>
+  )
+}
+
 
 const CennikUslug: React.FC = () => {
   const navigate = useNavigate()
   return (
     <PageContainer>
         <HeaderContainer>
-          <PraxiLogo onClick={() => navigate('/praxident/')} alt="praxident-logo"/>
-          <TextLabel className={'w-200 h-100 text-[55px] md:text-[75px] '}>CENNIK USŁUG</TextLabel>
+          <PraxiLogo className='mr-10' onClick={() => navigate('/praxident/')} alt="praxident-logo"/>
+          <TextLabel className={'w-200 h-100 text-[45px]'}>CENNIK USŁUG</TextLabel>
         </HeaderContainer>
         <Wybielanie/>
         <StomatologiaDziecieca/>
         <Protetyka/>
+        <CustomFooter/>
+
     </PageContainer>
   );
 };
 
 const Wybielanie: React.FC = () => {
   return (
-  <div style={styles.tableContainer}>
-    <div style={styles.tableLabel}>WYBIELANIE</div>
-    <table style={styles.table}>
+  <TableContainer>
+    <TableLabel>WYBIELANIE</TableLabel>
+    <Table>
       <tr>
-        <td style={styles.cell}>WYBIELANIE ZĘBA MARTWEGO</td>
-        <td style={styles.cell}>500</td>
+        <Cell>WYBIELANIE ZĘBA MARTWEGO</Cell>
+        <Cell>500</Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>WYBIELANIE METODĄ NAKŁADKOWĄ</td>
-        <td style={styles.cell}>OD 900</td>
+        <Cell>WYBIELANIE METODĄ NAKŁADKOWĄ</Cell>
+        <Cell>OD 900</Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>WYBIELANIE GABINETOWE</td>
-        <td style={styles.cell}>2200</td>
+        <Cell>WYBIELANIE GABINETOWE</Cell>
+        <Cell>2200</Cell>
       </tr>
-    </table>
-  </div>
+    </Table>
+  </TableContainer>
   )
 }
 
 const StomatologiaDziecieca: React.FC = () => {
   return (
-  <div style={styles.tableContainer}>
-    <div style={styles.tableLabel}>STOMATOLOGIA DZIECIĘCA</div>
-    <table style={styles.table}>
+  <TableContainer>
+    <TableLabel>STOMATOLOGIA DZIECIĘCA</TableLabel>
+    <Table>
       <tr>
-        <td style={styles.cell}>WYPEŁNIENIE W ZĘBIE MLECZNYM</td>
-        <td style={styles.cell}>150</td>
+        <Cell>WYPEŁNIENIE W ZĘBIE MLECZNYM</Cell>
+        <Cell>150</Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>USUNIĘCIE ZĘBA MLECZNEGO</td>
-        <td style={styles.cell}>100 </td>
+        <Cell>USUNIĘCIE ZĘBA MLECZNEGO</Cell>
+        <Cell>100 </Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>LAKOWANIE</td>
-        <td style={styles.cell}>100</td>
+        <Cell>LAKOWANIE</Cell>
+        <Cell>100</Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>POSZERZONE LAKOWANIE</td>
-        <td style={styles.cell}>200</td>
+        <Cell>POSZERZONE LAKOWANIE</Cell>
+        <Cell>200</Cell>
       </tr>
-    </table>
-  </div>
+    </Table>
+  </TableContainer>
   )
 }
 
 const Protetyka: React.FC = () => {
   return (
-  <div style={styles.tableContainer}>
-    <div style={styles.tableLabel}>PROTETYKA</div>
-    <table style={styles.table}>
+  <TableContainer>
+    <TableLabel>PROTETYKA</TableLabel>
+    <Table>
       <tr>
-        <td style={styles.cell}>PROTEZA SZKIELETOWA</td>
-        <td style={styles.cell}>2500-2700</td>
+        <Cell>PROTEZA SZKIELETOWA</Cell>
+        <Cell>2500-2700</Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>PROTEZA AKRONOWA</td>
-        <td style={styles.cell}>2500-2700 </td>
+        <Cell>PROTEZA AKRONOWA</Cell>
+        <Cell>2500-2700 </Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>PROTEZA AKRYLOWA CZĘŚCIOWA</td>
-        <td style={styles.cell}>1200</td>
+        <Cell>PROTEZA AKRYLOWA CZĘŚCIOWA</Cell>
+        <Cell>1200</Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>PROTEZA CAŁKOWITA</td>
-        <td style={styles.cell}>2000</td>
+        <Cell>PROTEZA CAŁKOWITA</Cell>
+        <Cell>2000</Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>KORONA PEŁNOCERAMICZNA - CERKON</td>
-        <td style={styles.cell}>2000</td>
+        <Cell>KORONA PEŁNOCERAMICZNA - CERKON</Cell>
+        <Cell>2000</Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>KORONA CERAMICZNA NA PODBUDOWIE METALOWEJ</td>
-        <td style={styles.cell}>1200 </td>
+        <Cell>KORONA CERAMICZNA NA PODBUDOWIE METALOWEJ</Cell>
+        <Cell>1200 </Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>MOST KOMPOZYTOWY NA WŁÓKNIE SZKLANYM</td>
-        <td style={styles.cell}>900-1300</td>
+        <Cell>MOST KOMPOZYTOWY NA WŁÓKNIE SZKLANYM</Cell>
+        <Cell>900-1300</Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>LICÓWKA</td>
-        <td style={styles.cell}>2000</td>
+        <Cell>LICÓWKA</Cell>
+        <Cell>2000</Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>DEMONTAŻ KORONY</td>
-        <td style={styles.cell}>100</td>
+        <Cell>DEMONTAŻ KORONY</Cell>
+        <Cell>100</Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>KORONA TYMCZASOWA</td>
-        <td style={styles.cell}>200 </td>
+        <Cell>KORONA TYMCZASOWA</Cell>
+        <Cell>200 </Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>PODŚCIELENIE PROTEZY</td>
-        <td style={styles.cell}>500</td>
+        <Cell>PODŚCIELENIE PROTEZY</Cell>
+        <Cell>500</Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>NAPRAWA PROTEZY</td>
-        <td style={styles.cell}>OD 150</td>
+        <Cell>NAPRAWA PROTEZY</Cell>
+        <Cell>OD 150</Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>DOSTAWIENIE ZĘBA DO PROTEZY</td>
-        <td style={styles.cell}>150</td>
+        <Cell>DOSTAWIENIE ZĘBA DO PROTEZY</Cell>
+        <Cell>150</Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>MOST PEŁNOCERAMICZNY (1 PUNKT)</td>
-        <td style={styles.cell}>2400 </td>
+        <Cell>MOST PEŁNOCERAMICZNY (1 PUNKT)</Cell>
+        <Cell>2400 </Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>MOST CERAMICZNY NA PODBUDOWIE METALOWEJ (1 PUNKT)</td>
-        <td style={styles.cell}>1200</td>
+        <Cell>MOST CERAMICZNY NA PODBUDOWIE METALOWEJ (1 PUNKT)</Cell>
+        <Cell>1200</Cell>
       </tr>
       <tr>
-        <td style={styles.cell}>MOST TYMCZASOWY</td>
-        <td style={styles.cell}>400</td>
+        <Cell>MOST TYMCZASOWY</Cell>
+        <Cell>400</Cell>
       </tr>
-    </table>
-  </div>
+    </Table>
+  </TableContainer>
   )
 }
 
@@ -166,9 +205,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     fontSize: '5rem',
     marginRight: '10vw',
   },
-  tableContainer: {
 
-  },
   tableLabel: {
     marginBottom: '4vh',
     fontSize: '2.5rem',
