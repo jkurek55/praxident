@@ -9,12 +9,12 @@ const MenuButton: React.FC<menuButtonProps> = ({ onClick, className }) => {
   return (
     <button
       onClick={onClick}
-      className={`flex xl:hidden flex-col justify-between w-16 h-12  border-black cursor-pointer ${className}`}
+      className={`flex xl:hidden flex-col justify-between w-12 h-9  border-black cursor-pointer ${className}`}
       aria-label="Open menu"
     >
-      <span className="block h-2 bg-black w-full"></span>
-      <span className="block h-2 bg-black w-full"></span>
-      <span className="block h-2 bg-black w-full"></span>
+      <span className="block h-1.5 bg-black w-full rounded"></span>
+      <span className="block h-1.5 bg-black w-full rounded"></span>
+      <span className="block h-1.5 bg-black w-full rounded"></span>
     </button>
   );
 };

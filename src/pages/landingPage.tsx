@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PraxiLogo from '../components/praxiLogo';
 import PageContainer from '../components/pageContainer';
@@ -18,8 +18,26 @@ import ContactSection from '../components/slides/contactSection';
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
+  const kontaktRef = useRef<HTMLDivElement | null>(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   const [showDropdownMenu, setShowDropdownMenu] = useState<boolean>(false)
+
+  const scrollToSection = useCallback(() => {
+    setShowDropdownMenu(false)
+    kontaktRef.current?.scrollIntoView({ behavior: "smooth" })
+  }, [])
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setShowDropdownMenu(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
 
   return (
     <PageContainer>
@@ -28,9 +46,7 @@ const LandingPage: React.FC = () => {
           <TransparentBox>
             <Button>START</Button>
             <DashedButton onClick={() => navigate('/praxident/cennik')}>ZABIEGI</DashedButton>
-            <Button>O NAS</Button>
-            <Button>CENNIK</Button>
-            <BlackButton>KONTAKT</BlackButton>
+            <BlackButton onClick={scrollToSection}>KONTAKT</BlackButton>
           </TransparentBox>
           <MenuButton onClick={() => setShowDropdownMenu(!showDropdownMenu)}/>
       </HeaderRow>
@@ -39,25 +55,18 @@ const LandingPage: React.FC = () => {
           <SmileSection/>
           <FieldSection/>
           <RentgenSection/>
-          <OfficeSlide/>
+          <OfficeSlide ref={kontaktRef}/>
           <RegistrationSlide/>
           <MapSlide/>
           <ContactSection/>
         </div>
       </div>
       <CustomFooter/>
-
-
-
-
-
       {
-        showDropdownMenu && <DropdownMenu relativeY={50}>
+        showDropdownMenu && <DropdownMenu ref={menuRef} relativeY={50}>
             <Button>START</Button>
             <DashedButton onClick={() => navigate('/praxident/cennik')}>ZABIEGI</DashedButton>
-            <Button>O NAS</Button>
-            <Button>CENNIK</Button>
-            <BlackButton>KONTAKT</BlackButton>
+            <BlackButton onClick={scrollToSection}>KONTAKT</BlackButton>
           </DropdownMenu>
       }
     </PageContainer>

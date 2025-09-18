@@ -49,7 +49,7 @@ const CennikUslug: React.FC = () => {
     <PageContainer>
         <HeaderContainer>
           <PraxiLogo className='mr-10' onClick={() => navigate('/praxident/')} alt="praxident-logo"/>
-          <TextLabel className={'w-200 h-100 text-[45px]'}>CENNIK USŁUG</TextLabel>
+          <TextLabel className={'w-200 h-100 text-[40px]'}>CENNIK USŁUG</TextLabel>
         </HeaderContainer>
         <Wybielanie/>
         <StomatologiaDziecieca/>

@@ -1,21 +1,19 @@
 import React from "react";
-import praxiLogo from "../../images/praxiLogo.png";
+//import praxiLogo from "../../images/praxiLogo.png";
 import pin from "../../images/mapPin.png"
 import map from "../../images/map.png"
 
 const MapSlide: React.FC = () => {
     return(
         <section>
-            <div className="grid grid-cols-2 text-center items-center">
-                <img src={praxiLogo} alt="praxident logo" />
-                <div className="font-light font-sans text-xl">Wjazd od ul. Tadeusza Kościuszki</div>
-            </div>
-            <div className="grid grid-cols-2">
-                <div className="grid grid-cols-4 items-center">
+            <div className="grid grid-rows-3">
+                <div className="grid grid-cols-4 items-center ml-14 mr-14 pb-4">
                     <img className="h-14 object-contain" src={pin} alt="map pin" />
-                    <div className="col-span-3 font-sans font-light">Wojska Polskiego 1e Strzelin</div>
+                    <div className=" font-sans font-light col-span-3">Wojska Polskiego 1e Strzelin</div>
+                    <div className="pl-10 font-sans font-light col-span-4">Wjazd od ul. Tadeusza Kościuszki</div>
+                
                 </div>
-                <img src={map} alt="directions" />
+                <img className="row-span-2" src={map} alt="directions" />
             </div>
 
         </section>

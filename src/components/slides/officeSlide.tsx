@@ -16,11 +16,13 @@ const Row:React.FC<rowProps> = ({children, className}) => {
     )
 }
 
+interface offiseSlideProps{
+    ref: React.Ref<HTMLElement>
+}
 
-
-const OfficeSlide: React.FC = () => {
+const OfficeSlide: React.FC<offiseSlideProps> = ({ref}) => {
     return (
-        <section>
+        <section ref={ref}>
             <div className="grid grid-cols-2">
                 <div className="grid grid-rows-6 col-span-2 place-items-center text-center">
                     <img className="h-24 row-span-2 object-contain" src={cross} alt="orange cross" />
