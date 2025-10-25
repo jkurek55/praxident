@@ -8,8 +8,12 @@ interface rowProps{
 
 const Row:React.FC<rowProps> = ({children, className}) => {
     return (
-    <div className="flex items-center text-xs gap-4 ">
-        <div className={"w-3 h-3 flex-shrink-0 bg-orange-500 rounded-full"}/>
+    <div className={`flex items-center gap-4`}>
+        <div className={`
+            flex-shrink-0 bg-orange-500 rounded-full
+            w-3 2xl:w-12
+            h-3 2xl:h-12
+            `}/>
         <div className={`font-light ${className}`} > {children} </div>
     </div>
     )
@@ -18,16 +22,31 @@ const Row:React.FC<rowProps> = ({children, className}) => {
 
 const RentgenSection:React.FC = () => {
     return (
-        <section>
-            <div className="grid grid-cols-3">
-                <div className="grid grid-rows-2 col-span-2 pl-3">
-                    <Row className="text-base">Pracownia rentgenowska</Row>
-                    <div className="grid grid-rows-2">
-                        <Row className="text-xs">Pantomogram OPG - cyfrowe zdjęcia panoramiczne</Row>
-                        <Row className="text-xs">Radiowizjografja RVG - cyfrowe zdjęcia małoobrazkowe</Row>
+        <section className={`2xl:h-[1200px]`}>
+            <div className="grid grid-cols-[8fr_5fr] overflow-clip">
+                <div className="
+                grid grid-rows-2 pl-3
+                2xl:h-[1000px]
+                ">
+                    <Row className={`
+                        text-base 2xl:text-7xl
+                        `}>Pracownia rentgenowska</Row>
+                    <div className={`
+                        grid grid-rows-2 
+                        text-xs 2xl:text-5xl
+                        2xl:py-32
+                        2xl:ml-12
+                        `} >
+                        <Row >Pantomogram OPG - cyfrowe zdjęcia panoramiczne</Row>
+                        <Row >Radiowizjografja RVG - cyfrowe zdjęcia małoobrazkowe</Row>
                     </div>
                 </div>
-                <img className='object-contain' src={aparatus} alt="aparatus" />
+                <img className={`
+                2xl:h-[1200px]
+                2xl:w-[800px]
+                2xl:object-cover
+                    `} 
+                    src={aparatus} alt="aparatus" />
             </div>
 
         </section>

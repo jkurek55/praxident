@@ -15,7 +15,6 @@ import RegistrationSlide from '../components/slides/registrationSlide';
 import MapSlide from '../components/slides/mapSlide';
 import CustomFooter from '../components/customFooter';
 import ContactSection from '../components/slides/contactSection';
-import Hero from '../components/Testtailwind';
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
@@ -70,7 +69,6 @@ const LandingPage: React.FC = () => {
             <BlackButton onClick={scrollToSection}>KONTAKT</BlackButton>
           </DropdownMenu>
       }
-      <Hero/>
     </PageContainer>
   );
 };

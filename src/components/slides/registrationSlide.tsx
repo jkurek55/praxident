@@ -8,9 +8,12 @@ interface rowProps{
 
 const Row:React.FC<rowProps> = ({children, className}) => {
     return (
-    <div className="flex items-center  gap-4 pl-2">
-        <div className={"w-3 h-3 flex-shrink-0 bg-orange-500 rounded-full"}/>
-        <div className={`font-light ${className}`} > {children} </div>
+    <div className={`flex items-center  gap-4 2xl:gap-0 pl-2 row-span-3 ${className}`}>
+        <div className={`flex-shrink-0 bg-orange-500 rounded-full
+            w-3 2xl:w-12
+            h-3 2xl:h-12
+            `}/>
+        <div className={` ${className}`} > {children} </div>
     </div>
     )
 }
@@ -18,10 +21,15 @@ const Row:React.FC<rowProps> = ({children, className}) => {
 const RegistrationSlide: React.FC = () => {
     return (
         <section>
-            <div className="grid grid-cols-1 xs:grid-cols-2">
-                <div className="grid grid-rows-3 place-items-center content-center  py-8">
-                    <Row>Rejestracja czynna od poniedziałku do piątku <br /> w godzinach:</Row>
-                    <div className="row-span-2 font-sans font-light text-sm pl-2">
+            <div className={`
+            grid grid-cols-1 2xl:grid-cols-2 
+            font-light
+            2xl:h-[1200px] 
+            text-sm 2xl:text-5xl
+            `}>
+                <div className="grid grid-rows-8 text-center ">
+                    <Row className={`pl-8`}>Rejestracja czynna od poniedziałku do piątku w godzinach:</Row>
+                    <div className="row-span-5">
                         Poniedziałek: 11:30 - 19:00 <br />
                         Wtorek: 8:30 - 16:00 <br />
                         Środa: 11:30 - 19:00 <br />
@@ -29,7 +37,9 @@ const RegistrationSlide: React.FC = () => {
                         Piątek: 8:30 - 16:00 <br />
                     </div>
                 </div>
-                <img  className="hidden xs:block object-contain" src={registrationDesk} alt="registration desk" />
+                <img  className={`
+                hidden 2xl:block 2xl:h-[1200px]
+                `} src={registrationDesk} alt="registration desk" />
             </div>
 
         </section>
