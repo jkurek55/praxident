@@ -2,17 +2,20 @@ import React from 'react';
 import { Route, useNavigate } from 'react-router-dom';
 import PageContainer from '../components/pageContainer';
 import HeaderContainer from '../components/headerContainer';
-import PraxiLogo from '../components/praxiLogo';
+//import PraxiLogo from '../components/praxiLogo';
+import praxiLogo from '../images/praxiLogo.png'
 import TextLabel from '../components/textLabel';
 import CustomFooter from '../components/customFooter';
 
+
 interface containerProps{
-  children: React.ReactNode
+  children: React.ReactNode,
+  className?: string
 }
 
 const Table: React.FC<containerProps> = ({children}) => {
   return (
-  <table className='ml-5 w-[90vw] m-5'>
+  <table className='w-11/12'>
     {children}
   </table>
   )
@@ -20,25 +23,41 @@ const Table: React.FC<containerProps> = ({children}) => {
 
 const TableLabel: React.FC<containerProps> = ({children}) => {
   return (
-  <div className='text-4xl ml-5 mb-2 font-light'>
+  <div className='text-4xl 2xl:text-6xl
+  ml-5 mb-2 2xl:mb-36 2xl:ml-20
+  font-light'>
     {children}
   </div>
   )
 }
 
-const Cell: React.FC<containerProps> = ({children}) => {
+const Cell: React.FC<containerProps> = ({children, className}) => {
   return (
-  <td className='border border-black text-sm text-center px-2 py-3'>
+  <td className={`border border-black font-light
+  text-sm 2xl:text-3xl
+  text-center 
+  px-2 py-3 2xl:p-6
+  w-1/2
+  ${className}
+  `}>
     {children}
   </td>
   )
 }
 
-const TableContainer: React.FC<containerProps> = ({children}) => {
+const TableContainer: React.FC<containerProps> = ({children, className}) => {
   return (
-  <div className='mb-10'>
+  <div className='mb-10 2xl:mb-64 '>
     {children}
   </div>
+  )
+}
+
+const SubTableContainer: React.FC<containerProps> = ({children, className}) => {
+  return (
+    <div className='flex justify-center'>
+      {children}
+    </div>
   )
 }
 
@@ -47,10 +66,13 @@ const CennikUslug: React.FC = () => {
   const navigate = useNavigate()
   return (
     <PageContainer>
-        <HeaderContainer>
-          <PraxiLogo className='mr-10' onClick={() => navigate('/praxident/')} alt="praxident-logo"/>
-          <TextLabel className={'w-200 h-100 text-[40px]'}>CENNIK USŁUG</TextLabel>
-        </HeaderContainer>
+        <div className='
+        grid grid-flow-row 2xl:grid-flow-col
+        2xl:h-[1000px]
+        items-center content-center'>
+          <img onClick={() => navigate('/praxident')} src={praxiLogo} alt="" />
+          <TextLabel className={'2xl:text-8xl 2xl:pb-8'} >CENNIK USŁUG</TextLabel>
+        </div>
         <Wybielanie/>
         <StomatologiaDziecieca/>
         <Protetyka/>
@@ -64,20 +86,22 @@ const Wybielanie: React.FC = () => {
   return (
   <TableContainer>
     <TableLabel>WYBIELANIE</TableLabel>
-    <Table>
-      <tr>
-        <Cell>WYBIELANIE ZĘBA MARTWEGO</Cell>
-        <Cell>500</Cell>
-      </tr>
-      <tr>
-        <Cell>WYBIELANIE METODĄ NAKŁADKOWĄ</Cell>
-        <Cell>OD 900</Cell>
-      </tr>
-      <tr>
-        <Cell>WYBIELANIE GABINETOWE</Cell>
-        <Cell>2200</Cell>
-      </tr>
-    </Table>
+      <SubTableContainer>
+        <Table>
+          <tr>
+            <Cell>WYBIELANIE ZĘBA MARTWEGO</Cell>
+            <Cell>500</Cell>
+          </tr>
+          <tr>
+            <Cell>WYBIELANIE METODĄ NAKŁADKOWĄ</Cell>
+            <Cell>OD 900</Cell>
+          </tr>
+          <tr>
+            <Cell>WYBIELANIE GABINETOWE</Cell>
+            <Cell>2200</Cell>
+          </tr>
+        </Table>
+      </SubTableContainer>
   </TableContainer>
   )
 }
@@ -86,24 +110,26 @@ const StomatologiaDziecieca: React.FC = () => {
   return (
   <TableContainer>
     <TableLabel>STOMATOLOGIA DZIECIĘCA</TableLabel>
-    <Table>
-      <tr>
-        <Cell>WYPEŁNIENIE W ZĘBIE MLECZNYM</Cell>
-        <Cell>150</Cell>
-      </tr>
-      <tr>
-        <Cell>USUNIĘCIE ZĘBA MLECZNEGO</Cell>
-        <Cell>100 </Cell>
-      </tr>
-      <tr>
-        <Cell>LAKOWANIE</Cell>
-        <Cell>100</Cell>
-      </tr>
-      <tr>
-        <Cell>POSZERZONE LAKOWANIE</Cell>
-        <Cell>200</Cell>
-      </tr>
-    </Table>
+      <SubTableContainer>
+        <Table>
+          <tr>
+            <Cell>WYPEŁNIENIE W ZĘBIE MLECZNYM</Cell>
+            <Cell>150</Cell>
+          </tr>
+          <tr>
+            <Cell>USUNIĘCIE ZĘBA MLECZNEGO</Cell>
+            <Cell>100 </Cell>
+          </tr>
+          <tr>
+            <Cell>LAKOWANIE</Cell>
+            <Cell>100</Cell>
+          </tr>
+          <tr>
+            <Cell>POSZERZONE LAKOWANIE</Cell>
+            <Cell>200</Cell>
+          </tr>
+        </Table>
+      </SubTableContainer>
   </TableContainer>
   )
 }
@@ -112,72 +138,74 @@ const Protetyka: React.FC = () => {
   return (
   <TableContainer>
     <TableLabel>PROTETYKA</TableLabel>
-    <Table>
-      <tr>
-        <Cell>PROTEZA SZKIELETOWA</Cell>
-        <Cell>2500-2700</Cell>
-      </tr>
-      <tr>
-        <Cell>PROTEZA AKRONOWA</Cell>
-        <Cell>2500-2700 </Cell>
-      </tr>
-      <tr>
-        <Cell>PROTEZA AKRYLOWA CZĘŚCIOWA</Cell>
-        <Cell>1200</Cell>
-      </tr>
-      <tr>
-        <Cell>PROTEZA CAŁKOWITA</Cell>
-        <Cell>2000</Cell>
-      </tr>
-      <tr>
-        <Cell>KORONA PEŁNOCERAMICZNA - CERKON</Cell>
-        <Cell>2000</Cell>
-      </tr>
-      <tr>
-        <Cell>KORONA CERAMICZNA NA PODBUDOWIE METALOWEJ</Cell>
-        <Cell>1200 </Cell>
-      </tr>
-      <tr>
-        <Cell>MOST KOMPOZYTOWY NA WŁÓKNIE SZKLANYM</Cell>
-        <Cell>900-1300</Cell>
-      </tr>
-      <tr>
-        <Cell>LICÓWKA</Cell>
-        <Cell>2000</Cell>
-      </tr>
-      <tr>
-        <Cell>DEMONTAŻ KORONY</Cell>
-        <Cell>100</Cell>
-      </tr>
-      <tr>
-        <Cell>KORONA TYMCZASOWA</Cell>
-        <Cell>200 </Cell>
-      </tr>
-      <tr>
-        <Cell>PODŚCIELENIE PROTEZY</Cell>
-        <Cell>500</Cell>
-      </tr>
-      <tr>
-        <Cell>NAPRAWA PROTEZY</Cell>
-        <Cell>OD 150</Cell>
-      </tr>
-      <tr>
-        <Cell>DOSTAWIENIE ZĘBA DO PROTEZY</Cell>
-        <Cell>150</Cell>
-      </tr>
-      <tr>
-        <Cell>MOST PEŁNOCERAMICZNY (1 PUNKT)</Cell>
-        <Cell>2400 </Cell>
-      </tr>
-      <tr>
-        <Cell>MOST CERAMICZNY NA PODBUDOWIE METALOWEJ (1 PUNKT)</Cell>
-        <Cell>1200</Cell>
-      </tr>
-      <tr>
-        <Cell>MOST TYMCZASOWY</Cell>
-        <Cell>400</Cell>
-      </tr>
-    </Table>
+      <SubTableContainer>
+        <Table>
+          <tr>
+            <Cell>PROTEZA SZKIELETOWA</Cell>
+            <Cell>2500-2700</Cell>
+          </tr>
+          <tr>
+            <Cell>PROTEZA AKRONOWA</Cell>
+            <Cell>2500-2700 </Cell>
+          </tr>
+          <tr>
+            <Cell>PROTEZA AKRYLOWA CZĘŚCIOWA</Cell>
+            <Cell>1200</Cell>
+          </tr>
+          <tr>
+            <Cell>PROTEZA CAŁKOWITA</Cell>
+            <Cell>2000</Cell>
+          </tr>
+          <tr>
+            <Cell>KORONA PEŁNOCERAMICZNA - CERKON</Cell>
+            <Cell>2000</Cell>
+          </tr>
+          <tr>
+            <Cell>KORONA CERAMICZNA NA PODBUDOWIE METALOWEJ</Cell>
+            <Cell>1200 </Cell>
+          </tr>
+          <tr>
+            <Cell>MOST KOMPOZYTOWY NA WŁÓKNIE SZKLANYM</Cell>
+            <Cell>900-1300</Cell>
+          </tr>
+          <tr>
+            <Cell>LICÓWKA</Cell>
+            <Cell>2000</Cell>
+          </tr>
+          <tr>
+            <Cell>DEMONTAŻ KORONY</Cell>
+            <Cell>100</Cell>
+          </tr>
+          <tr>
+            <Cell>KORONA TYMCZASOWA</Cell>
+            <Cell>200 </Cell>
+          </tr>
+          <tr>
+            <Cell>PODŚCIELENIE PROTEZY</Cell>
+            <Cell>500</Cell>
+          </tr>
+          <tr>
+            <Cell>NAPRAWA PROTEZY</Cell>
+            <Cell>OD 150</Cell>
+          </tr>
+          <tr>
+            <Cell>DOSTAWIENIE ZĘBA DO PROTEZY</Cell>
+            <Cell>150</Cell>
+          </tr>
+          <tr>
+            <Cell>MOST PEŁNOCERAMICZNY (1 PUNKT)</Cell>
+            <Cell>2400 </Cell>
+          </tr>
+          <tr>
+            <Cell>MOST CERAMICZNY NA PODBUDOWIE METALOWEJ (1 PUNKT)</Cell>
+            <Cell>1200</Cell>
+          </tr>
+          <tr>
+            <Cell>MOST TYMCZASOWY</Cell>
+            <Cell>400</Cell>
+          </tr>
+        </Table>
+    </SubTableContainer>
   </TableContainer>
   )
 }
