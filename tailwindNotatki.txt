@@ -1,0 +1,33 @@
+font sizes:
+xs
+sm
+base
+lg
+xl
+2xl
+...
+9xl
+
+
+sizes:
+0	14	60
+1	16	64
+2	18	72
+3	20	80
+4	24	96
+5	28
+6	32
+7	36
+8	40
+9	44	
+10  48
+11	52
+12	56
+
+breakpoints:
+	xs  32.5rem (520px)
+	sm	40rem (640px)	@media (width >= 40rem) { ... }
+	md	48rem (768px)	@media (width >= 48rem) { ... }
+	lg	64rem (1024px)	@media (width >= 64rem) { ... }
+	xl	80rem (1280px)	@media (width >= 80rem) { ... }
+	2xl	96rem (1536px)	@media (width >= 96rem) { ... }
