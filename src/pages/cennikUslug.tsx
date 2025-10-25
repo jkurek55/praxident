@@ -23,8 +23,10 @@ const Table: React.FC<containerProps> = ({children}) => {
 
 const TableLabel: React.FC<containerProps> = ({children}) => {
   return (
-  <div className='text-4xl 2xl:text-6xl
-  ml-5 mb-2 2xl:mb-36 2xl:ml-20
+  <div className='
+  text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl
+  mb-6 xs:mb-8 sm:mb-12 md:mb-14 lg:mb-18  2xl:mb-18 
+  ml-4 xs:ml-6 sm:ml-8 md:ml-12 lg:ml-16 xl:ml-16 2xl:ml-20
   font-light'>
     {children}
   </div>
@@ -34,9 +36,9 @@ const TableLabel: React.FC<containerProps> = ({children}) => {
 const Cell: React.FC<containerProps> = ({children, className}) => {
   return (
   <td className={`border border-black font-light
-  text-sm 2xl:text-3xl
+  text-md xs:text-lg sm:text-xl md:text-2xl lg:text-3xl
   text-center 
-  px-2 py-3 2xl:p-6
+  p-2 xs:p-2 sm:p-3 md:p-6
   w-1/2
   ${className}
   `}>
@@ -47,7 +49,7 @@ const Cell: React.FC<containerProps> = ({children, className}) => {
 
 const TableContainer: React.FC<containerProps> = ({children, className}) => {
   return (
-  <div className='mb-10 2xl:mb-64 '>
+  <div className='mb-12 xs:mb-16 sm:mb-32 md:mb-52 xl:mb-64'>
     {children}
   </div>
   )
@@ -67,11 +69,15 @@ const CennikUslug: React.FC = () => {
   return (
     <PageContainer>
         <div className='
-        grid grid-flow-row 2xl:grid-flow-col
-        2xl:h-[1000px]
-        items-center content-center'>
-          <img onClick={() => navigate('/praxident')} src={praxiLogo} alt="" />
-          <TextLabel className={'2xl:text-8xl 2xl:pb-8'} >CENNIK USŁUG</TextLabel>
+        grid grid-flow-col  
+        h-[250px] xs:h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[800px] 2xl:h-[1000px]
+        items-center content-center p-8'>
+          <img onClick={() => navigate('/praxident')} src={praxiLogo} alt=""
+          className='h-[100px] xs:h-[120px] sm:h-[150px] lg:h-[240px] xl:h-[320px]' />
+          <TextLabel className={`
+            text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
+            xl:pb-8
+            `} >CENNIK USŁUG</TextLabel>
         </div>
         <Wybielanie/>
         <StomatologiaDziecieca/>
