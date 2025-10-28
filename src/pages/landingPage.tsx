@@ -43,19 +43,18 @@ const LandingPage: React.FC = () => {
     <PageContainer>
       <HeaderRow >
         <PraxiLogo alt='praxident-logo' />
-          <TransparentBox>
+          {/*<TransparentBox>
             <Button>START</Button>
             <DashedButton onClick={() => navigate('/praxident/cennik')}>ZABIEGI</DashedButton>
             <BlackButton onClick={scrollToSection}>KONTAKT</BlackButton>
           </TransparentBox>
-          <MenuButton onClick={() => setShowDropdownMenu(!showDropdownMenu)}/>
+          <MenuButton onClick={() => setShowDropdownMenu(!showDropdownMenu)}/>*/}
       </HeaderRow>
       <div className={'w-full overflow-hidden'}>
         <div>
           <SmileSection/>
           <FieldSection/>
           <RentgenSection/>
-          <OfficeSlide ref={kontaktRef}/>
           <RegistrationSlide/>
           <MapSlide/>
           <ContactSection/>

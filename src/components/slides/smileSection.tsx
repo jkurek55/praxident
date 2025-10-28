@@ -5,7 +5,7 @@ import praxiLogo from '../../images/logo.png'
 const SmileSection: React.FC = () => {
     return (
         <section 
-        className={`bg-[url('images/smilingWoman.png')] bg-cover bg-top 
+        className={`bg-[url('images/smilingWoman2.jpg')] bg-cover bg-top 
         relative w-screen 
         text-xs xs:text-lg 
         sm:text-xl 
