@@ -34,7 +34,6 @@ const FieldSection: React.FC = () => {
                     <Row> Protetyka stomatologiczna </Row>
                     <Row> Endodoncja </Row>
                     <Row> Chirurgia stomatologiczna </Row>
-                    <Row> Ortodoncja </Row>
                 </div>
                 <img className={"w-1/2 object-contain"} src={unit} alt="unit" />
             </div>
