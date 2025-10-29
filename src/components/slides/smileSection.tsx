@@ -1,6 +1,6 @@
 import praxiLogo from '../../images/logo.webp'
-import smilingWoman from '../../images/smilingWoman2_2.avif'
-import smilingWomanMobile from '../../images/smilingWoman2_mobile2.avif'
+import smilingWoman from '/images/smilingWoman2_2.avif'
+import smilingWomanMobile from '/images/smilingWoman2_mobile2.avif'
 
 
 const SmileSection: React.FC = () => {
