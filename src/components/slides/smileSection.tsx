@@ -1,6 +1,4 @@
 import praxiLogo from '../../images/logo.webp'
-import smilingWoman from '/images/smilingWoman2_2.avif'
-import smilingWomanMobile from '/images/smilingWoman2_mobile2.avif'
 
 
 const SmileSection: React.FC = () => {
@@ -14,12 +12,12 @@ const SmileSection: React.FC = () => {
         sm:text-xl 
         h-64 xs:h-72 sm:h-80 md:h-[600px] lg:h-[900px] xl:h-[900px] 2xl:h-[1100px] overflow-hidden
         `}>
-            <img fetchPriority="high" src={smilingWoman} alt="smiling-woman" loading='eager'
+            <img fetchPriority="high" src={'/praxident/images/smilingWoman2_2.avif'} alt="smiling-woman" loading='eager'
             className="hidden sm:block absolute inset-0
             h-64 xs:h-72 sm:h-80 md:h-[600px] lg:h-[900px] xl:h-[900px] 2xl:h-[1100px] 
             w-full object-cover" 
             />
-            <img fetchPriority="high" src={smilingWomanMobile} alt="smiling-woman" loading='eager'
+            <img fetchPriority="high" src={'/praxident/images/smilingWoman2_mobile2.avif'} alt="smiling-woman" loading='eager'
             className="block sm:hidden absolute inset-0
             h-64 xs:h-72 sm:h-80
             w-full object-cover" 

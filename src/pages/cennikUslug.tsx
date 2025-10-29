@@ -1,8 +1,6 @@
 import React from 'react';
-import { Route, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PageContainer from '../components/pageContainer';
-import HeaderContainer from '../components/headerContainer';
-//import PraxiLogo from '../components/praxiLogo';
 import praxiLogo from '../images/praxiLogo.webp'
 import TextLabel from '../components/textLabel';
 import CustomFooter from '../components/customFooter';
@@ -216,52 +214,5 @@ const Protetyka: React.FC = () => {
   )
 }
 
-const styles: { [key: string]: React.CSSProperties } = {
-  headerRow: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    width: '100%',
-    boxSizing: 'border-box',
-    padding: '1rem clamp(1rem, 5vw, 3rem)',
-    marginBottom: '10rem'
-  },
-  praxiLogo: {
-    width: '100%',
-    maxWidth: '40rem',
-    height: 'auto',
-    marginBottom: '2rem',
-    marginLeft: '10vw',
-    cursor: 'pointer'
-    
-  },
-  textLabel: {
-    fontSize: '5rem',
-    marginRight: '10vw',
-  },
-
-  tableLabel: {
-    marginBottom: '4vh',
-    fontSize: '2.5rem',
-    marginLeft: '10vw'
-  },
-  table: {
-    borderWidth: '2px',
-    border: '2px solid black',
-    borderCollapse: 'collapse',
-    width: '80vw',
-    marginLeft: '10vw',
-    marginRight: '10vw',
-    marginBottom: '14rem'
-  },
-  cell: {
-    border: '1px solid black',
-    padding: '0.5rem',
-    fontSize: '2rem',
-    width: '10rem',
-    textAlign: 'center'
-  }
-
-}
 
 export default CennikUslug;
