@@ -1,24 +1,22 @@
 {
   "files": {
     "main.css": "/praxident/static/css/main.304f2df8.css",
-    "main.js": "/praxident/static/js/main.c42c81a8.js",
+    "main.js": "/praxident/static/js/main.1e656a5f.js",
     "static/js/453.38811ad4.chunk.js": "/praxident/static/js/453.38811ad4.chunk.js",
-    "static/media/smilingWoman2_2.avif": "/praxident/static/media/smilingWoman2_2.6cfe5a7ee9396b1f192e.avif",
     "static/media/2.webp": "/praxident/static/media/2.b66d071303ce6b876472.webp",
     "static/media/3.webp": "/praxident/static/media/3.b9a53266f93542ce1154.webp",
     "static/media/4.webp": "/praxident/static/media/4.e55eeee74179b7b64da4.webp",
     "static/media/logo.webp": "/praxident/static/media/logo.99e43b9ba786a44ee800.webp",
-    "static/media/smilingWoman2_mobile2.avif": "/praxident/static/media/smilingWoman2_mobile2.1e4bd373507fb44e9822.avif",
     "static/media/map.webp": "/praxident/static/media/map.b8839ccabd677647e20c.webp",
     "static/media/praxiLogo.webp": "/praxident/static/media/praxiLogo.20c8ea4ee2fb5a6823bf.webp",
     "static/media/mapPin.webp": "/praxident/static/media/mapPin.ad51d8244d9f8b7924e4.webp",
     "index.html": "/praxident/index.html",
     "main.304f2df8.css.map": "/praxident/static/css/main.304f2df8.css.map",
-    "main.c42c81a8.js.map": "/praxident/static/js/main.c42c81a8.js.map",
+    "main.1e656a5f.js.map": "/praxident/static/js/main.1e656a5f.js.map",
     "453.38811ad4.chunk.js.map": "/praxident/static/js/453.38811ad4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.304f2df8.css",
-    "static/js/main.c42c81a8.js"
+    "static/js/main.1e656a5f.js"
   ]
 }
