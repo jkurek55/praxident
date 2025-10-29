@@ -1,5 +1,4 @@
-// components/Container.tsx
-import praxiLogo from '../images/praxiLogo.png'
+import praxiLogo from '../images/praxiLogo.webp'
 import React from 'react';
 
 interface PraxiLogoProps {
@@ -10,7 +9,7 @@ interface PraxiLogoProps {
 
 const PraxiLogo: React.FC<PraxiLogoProps> = ({ className = '', onClick, alt}) => {
     return (
-    <img src={praxiLogo} onClick={onClick} className={`w-[300px] md:w-[600px] xl:w-[600px] alt=${alt} cursor-pointer ${className}`}/>
+    <img src={praxiLogo} alt={alt} onClick={onClick} className={`h-[152px] md:h-[304px] cursor-pointer ${className}`}/>
     );
 };
 

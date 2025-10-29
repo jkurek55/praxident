@@ -1,5 +1,5 @@
 import React from "react";
-import unit from '../../images/2.png';
+import unit from '../../images/2.webp';
 
 interface rowProps{
     children: React.ReactNode

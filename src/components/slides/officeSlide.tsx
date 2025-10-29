@@ -1,6 +1,6 @@
 import React from "react";
-import cross from "../../images/cross.png"
-import office from "../../images/5.jpg"
+import cross from "../../images/cross.webp"
+import office from "../../images/5.webp"
 
 interface rowProps{
     children: React.ReactNode

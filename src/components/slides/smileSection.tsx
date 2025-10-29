@@ -1,16 +1,29 @@
-import React from "react";
-//import smilingWoman from '../../images/smilingWoman.png';
-import praxiLogo from '../../images/logo.png'
+import praxiLogo from '../../images/logo.webp'
+import smilingWoman from '../../images/smilingWoman2.webp'
+import smilingWomanMobile from '../../images/smilingWoman2_mobile.webp'
+
 
 const SmileSection: React.FC = () => {
+
+
     return (
         <section 
-        className={`bg-[url('images/smilingWoman2.jpg')] bg-cover bg-top 
+        className={`
         relative w-screen 
         text-xs xs:text-lg 
         sm:text-xl 
-        h-64 xs:h-72 sm:h-80 md:h-[600px] lg:h-[900px] xl:h-[900px] 2xl:h-[1100px]
+        h-64 xs:h-72 sm:h-80 md:h-[600px] lg:h-[900px] xl:h-[900px] 2xl:h-[1100px] overflow-hidden
         `}>
+            <img fetchPriority="high" src={smilingWoman} alt="smiling-woman" 
+            className="hidden sm:block absolute inset-0
+            h-64 xs:h-72 sm:h-80 md:h-[600px] lg:h-[900px] xl:h-[900px] 2xl:h-[1100px] 
+            w-full object-cover" 
+            />
+            <img fetchPriority="high" src={smilingWomanMobile} alt="smiling-woman" 
+            className="block sm:hidden absolute inset-0
+            h-64 xs:h-72 sm:h-80
+            w-full object-cover" 
+            />
             <div className={`
             flex flex-col justify-between absolute
             h-24 xs:h-36 sm:h-44 md:h-52 lg:h-64 xl:h-72 2xl:h-96

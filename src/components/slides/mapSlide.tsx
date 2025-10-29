@@ -1,8 +1,7 @@
 import React from "react";
-//import praxiLogo from "../../images/praxiLogo.png";
-import pin from "../../images/mapPin.png"
-import map from "../../images/map.png"
-import praxiLogo from "../../images/praxiLogo.png";
+import pin from "../../images/mapPin.webp"
+import map from "../../images/map.webp"
+import praxiLogo from "../../images/praxiLogo.webp";
 
 const MapSlide: React.FC = () => {
     return(

@@ -3,7 +3,7 @@ import { Route, useNavigate } from 'react-router-dom';
 import PageContainer from '../components/pageContainer';
 import HeaderContainer from '../components/headerContainer';
 //import PraxiLogo from '../components/praxiLogo';
-import praxiLogo from '../images/praxiLogo.png'
+import praxiLogo from '../images/praxiLogo.webp'
 import TextLabel from '../components/textLabel';
 import CustomFooter from '../components/customFooter';
 

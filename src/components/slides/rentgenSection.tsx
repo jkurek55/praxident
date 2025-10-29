@@ -1,5 +1,5 @@
 import React from "react";
-import aparatus from "../../images/3.png"
+import aparatus from "../../images/3.webp"
 
 interface rowProps{
     children: React.ReactNode

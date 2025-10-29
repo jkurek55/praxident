@@ -1,5 +1,5 @@
 import React from "react";
-import registrationDesk from "../../images/4.jpg"
+import registrationDesk from "../../images/4.webp"
 
 interface rowProps{
     children: React.ReactNode
