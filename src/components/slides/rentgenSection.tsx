@@ -34,7 +34,7 @@ const RentgenSection:React.FC = () => {
                     <div className={`
                         grid grid-rows-2 
                         text-xs xs:text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl
-                        py-8 xs:py-12 sm:py-16 lg:py-18 xl:py-24 2xl:py-32
+                        py-0 xs:py-12 sm:py-16 lg:py-18 xl:py-24 2xl:py-32
                         ml-4 xs:ml-6  lg:ml-8 xl:ml-12 2xl:ml-12
                         `} >
                         <Row >Pantomogram OPG - cyfrowe zdjęcia panoramiczne</Row>

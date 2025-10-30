@@ -1,7 +1,7 @@
 {
   "name": "praxident",
   "version": "0.1.0",
-  "homepage": "https://jkurek55.github.io/praxident",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
