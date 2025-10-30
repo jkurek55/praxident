@@ -8,15 +8,15 @@ const ContactSection:React.FC = () => {
         bg-gray-100
         ">
             <div className="flex 
-            px-4 xs:px-8 sm:px-10 md:px-12 lg:px-16 xl:px-24
+            px-1 xs:px-8 sm:px-10 md:px-12 lg:px-16 xl:px-24
             ">
                 <div className="font-sans font-bold content-center
-                text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-5xl 2xl:text-6xl
+                text-sm xs:text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-5xl 2xl:text-6xl
                 ">Zapraszamy do kontaktu!</div>
                 <div className="flex-grow"></div>
                 <div className="flex items-center 
                  gap-2 xs:gap-6
-                 text-lg xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl  2xl:text-4xl 
+                 text-md xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl  2xl:text-4xl 
                 font-sans
                 ">
                     <div className="bg-black rounded text-white 
